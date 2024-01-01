@@ -1,4 +1,9 @@
+import { Home } from './components';
 const App = () => {
-  return <h2>Strapi Starter</h2>;
+	return (
+		<>
+			<Home />
+		</>
+	);
 };
 export default App;
