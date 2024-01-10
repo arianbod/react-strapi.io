@@ -1,8 +1,8 @@
 import React from 'react';
 
-const LinksItemSidebar = ({ links, page, pageId }) => {
+const LinksItemSidebar = ({ links, page }) => {
 	return (
-		<article key={pageId}>
+		<article>
 			<h4>{page}</h4>
 			<div className='sidebar-sublinks'>
 				{links.map((link) => {
