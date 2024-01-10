@@ -6,7 +6,6 @@ const App = () => {
 			<Navbar />
 			<PageContent />
 			<Sidebar />
-			<SubMenu />
 		</main>
 	);
 };
