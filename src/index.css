@@ -328,9 +328,57 @@ nav {
 }
 /* ======= sidebar ======== */
 .sidebar {
+	position: fixed;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	background: var(--white);
 	visibility: hidden;
+	opacity: 0;
+}
+.sidebar-container {
+	padding: 4rem 2rem;
+	position: relative;
 }
 .show {
 	visibility: visible;
+	opacity: 1;
+	transition: var(--transition);
 }
-	.
+.close-btn {
+	font-size: 2rem;
+	background-color: transparent;
+	border: none;
+	color: var(--primary-500);
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	cursor: pointer;
+}
+.sidebar article {
+	margin-bottom: 2rem;
+}
+
+.sidebar h4 {
+	margin-bottom: 1rem;
+	color: var(--primary-700);
+}
+.sidebar-sublinks {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	row-gap: 0.5rem;
+}
+.sidebar-sublinks a {
+	display: flex;
+	gap: 1rem;
+	color: var(--grey-900);
+	text-transform: capitalize;
+}
+.sidebar-sublinks svg {
+	color: var(--grey-500);
+}
+@media screen and (min-width: 990px) {
+	.sidebar {
+		display: none;
+	}
+}
