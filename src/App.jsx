@@ -1,9 +1,14 @@
-import { Home } from './components';
+import React from 'react';
+import { Sidebar, Navbar, SubMenu, PageContent } from './components';
 const App = () => {
 	return (
-		<>
-			<Home />
-		</>
+		<main>
+			<Navbar />
+			<PageContent />
+			<Sidebar />
+			<SubMenu />
+		</main>
 	);
 };
+
 export default App;
