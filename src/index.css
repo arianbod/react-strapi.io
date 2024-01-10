@@ -377,6 +377,75 @@ nav {
 .sidebar-sublinks svg {
 	color: var(--grey-500);
 }
+
+/*============  NavLinks  ============  */
+.nav-links {
+	visibility: hidden;
+	opacity: 0;
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
+}
+@media screen and (min-width: 990px) {
+	.nav-links {
+		visibility: visible;
+		opacity: 1;
+	}
+	.nav-center {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		margin: auto;
+	}
+	.nav-link {
+		border: none;
+		background-color: transparent;
+		color: var(--white);
+		font-size: 1.25rem;
+		letter-spacing: var(--letterSpacing);
+		text-transform: capitalize;
+		cursor: pointer;
+	}
+	.sub-menu {
+		position: fixed;
+		top: 5rem;
+		width: var(--fluid-width);
+		left: 50%;
+		transform: rotateX(-90deg) translateX(-50%);
+		background-color: var(--white);
+		max-width: var(--max-width);
+		padding: 2rem;
+		transform-origin: top;
+		perspective: 1000px;
+		visibility: hidden;
+		opacity: 0;
+	}
+	.show-submenu {
+		visibility: visible;
+		opacity: 1;
+		transform: rotateX(0deg) translateX(-50%);
+		transition: var(--transition);
+	}
+	.sub-menu-container {
+		display: grid;
+		row-gap: 1rem;
+	}
+	.sub-menu h5 {
+		margin-bottom: 1rem;
+		color: var(--primary-700);
+	}
+	.sub-menu-container a {
+		display: block;
+		color: var(--grey-900);
+		text-transform: capitalize;
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+	}
+	.sub-menu-container svg {
+		color: var(--grey-500);
+	}
+}
+/* ==========  Media Screen   ================ */
 @media screen and (min-width: 990px) {
 	.sidebar {
 		display: none;
