@@ -5,7 +5,12 @@ const LinksSIdebar = () => {
 	return (
 		<div className='sidebar-links'>
 			{sublinks.map((item) => {
-				return <LinksItemSidebar {...item} />;
+				return (
+					<LinksItemSidebar
+						key={item.pageId}
+						{...item}
+					/>
+				);
 			})}
 		</div>
 	);
