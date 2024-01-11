@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useGlobal } from './Context';
 import sublinks from '../data';
 const SubMenu = () => {
-	const { pageId, setPageId } = useGlobal();
+	const { pageId, setPageId, setMouseInSubmenu } = useGlobal();
 	const [submenuItems, setSubmenuItems] = useState([]);
 	const [foundItemPage, setFoundItemPage] = useState(null);
 	useEffect(() => {
@@ -14,7 +14,8 @@ const SubMenu = () => {
 	return (
 		<section
 			className={pageId ? 'sub-menu show-submenu' : 'sub-menu'}
-			onMouseLeave={() => setPageId(null)}>
+			onMouseLeave={() => (setPageId(null), setMouseInSubmenu(false))}
+			onMouseEnter={() => setMouseInSubmenu(true)}>
 			<h5>{foundItemPage}</h5>
 			<section
 				className='sub-menu-container'
