@@ -418,6 +418,7 @@ nav {
 		perspective: 1000px;
 		visibility: hidden;
 		opacity: 0;
+		border-radius: var(--borderRadius);
 	}
 	.show-submenu {
 		visibility: visible;
