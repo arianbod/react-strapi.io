@@ -2,6 +2,7 @@ import React, { useContext, createContext, useState } from 'react';
 const AppContext = createContext();
 export const AppProvider = ({ children }) => {
 	const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+	const [mouseInSubmenu, setMouseInSubmenu] = useState(false);
 	const [pageId, setPageId] = useState(null);
 	const openSidebar = () => setIsSidebarOpen(true);
 	const closeSidebar = () => setIsSidebarOpen(false);
@@ -11,6 +12,8 @@ export const AppProvider = ({ children }) => {
 		closeSidebar,
 		pageId,
 		setPageId,
+		mouseInSubmenu,
+		setMouseInSubmenu,
 	};
 	return <AppContext.Provider value={Values}>{children}</AppContext.Provider>;
 };
